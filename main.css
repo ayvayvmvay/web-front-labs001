@@ -15,6 +15,7 @@ header {
     background-color: #ffffff;    /* Белый фон */
     color: #333;                 /* Тёмно-серый текст */
     padding: 20px;              /* Отступы внутри контента */
+    margin: 10px 20px 45px;
   }
   
   footer {
@@ -22,6 +23,10 @@ header {
     color: #ecf0f1;             /* Светло-серый текст */
     padding: 1em;               /* Внутренние отступы */
     text-align: center;         /* Выравнивание по центру */
+    position: fixed;
+     bottom: 0;
+     right: 0;
+     left: 0;
   }
 
 a {
