@@ -10,17 +10,21 @@
      <link rel="shortcut icon" href="../favicon-16x16.ico" >
      <script>
          function ShowSum() {
-             let a = 5154;
-             let b = 7891;
+   
+             let inputA=document.getElementById('numberA')
+             let inputB=document.getElementById('numberB')
+ 
+             let a = parseInt(inputA.value);
+             let b = parseInt(inputB.value);
              let result = a+b;
              alert(" Сумма " + a + " и " + b + " равна " + result);
          }
          function ShowAuthor() {
-             let author = 'Автор страницы: \nПривалова Таисия Дмитриевна';
+             let author = 'Автор страницы: \nШевченко Иван Юрьевич';
              alert(author);
          }
          function ShowHi() {
-             let hi = 'Всем приветик! \nРада видеть вас на своей странице:)';
+             let hi = 'Всем привет \nРад видеть вас на своей странице:)';
              alert(hi);
          }
      </script>
@@ -29,12 +33,12 @@
              height: 30px;
              width: 250px;
              line-height: 30px;
-             border: 1px solid plum;
+             border: 1px solid rgb(146, 141, 255);
              background-color: white;
              border-radius: 7px;
              display: inline-block;
              margin: 2px;
-             text-align: center;
+             text-align: center;    
              cursor: pointer;
          }
      </style>
@@ -45,14 +49,15 @@
      </header>
  
      <main>
-         <div class="message" onclick="ShowSum()">Сколько будет 5154+7891?</div>
-
-         <div class="message" onclick="ShowAuthor()">Узнать, кто автор страницы</div>
+        <label>Первое число: <input type="number" value="5154" id="numberA"></label><br>
+        <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
+        <div class="message" onclick="ShowSum()">Найти сумму чисел</div>
+        <div class="message" onclick="ShowAuthor()">Узнать, кто автор страницы</div>
  
      </main>
  
      <footer ondblclick="ShowHi()">
-         &copy; Привалова Таисия, ФБИ-33, 2 курс, 2025
+         &copy; Шевченко Иван, ФБИ-34, 2 курс, 2025
      </footer>
      
  </body>
