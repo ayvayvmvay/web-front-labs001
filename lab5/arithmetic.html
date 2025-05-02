@@ -118,7 +118,15 @@
              let result = a**b;
              alert( a + " ** " + b + " = " + result);   
          }
-         
+         function changeOutput(buttonNum, backColor, textColor, borderRadius, borderStyle, borderWidth){
+             let output = document.getElementById('output');
+             output.innerHTML = 'Нажата кнопка' + buttonNum;
+             output.style.backgroundColor=backColor;
+             output.style.color=textColor;
+             output.style.borderRadius=borderRadius;
+             output.style.borderStyle=borderStyle;
+             output.style.borderWidth=borderWidth
+         }
          }
      </script>
      <style>
@@ -149,6 +157,14 @@
         <div class="message" onclick="ShowRas()">Найти разность чисел</div>
         <div class="message" onclick="ShowPr()">Найти произведение чисел</div>
         <div class="message" onclick="ShowDiv()">Найти отношение чисел</div>
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'red', 'yellow', '15px', 'dotted', '4px')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'lime', '5px', 'double', '5px')"> 
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3,'plum', 'blue', '10px', 'ridge', '3px')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'green', 'lightblue', '7px', 'dashed', '4px')">
+        </div>
+
+        <div id="output"></div>
  
      </main>
  
